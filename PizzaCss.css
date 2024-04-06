@@ -1,0 +1,572 @@
+/*Position*/
+ 
+#Pizzaaes {
+  background-color: #2e3033;
+  padding-top: 20%;
+}
+#Pizzaaes h2 {
+  color: white;
+  margin-top: -10%;
+  font-size:xx-large;
+  
+}
+ 
+ .containerpizza {
+      position: absolute;
+      height: 400px;
+      left: calc(50% - 550px);
+      display: flex;
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-top: 5%;
+    }
+    .containerpizzacreme {
+      position: absolute;
+      height: 400px;
+      left: calc(50% - 550px);
+      display: flex;
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-top: 115%;
+    }
+
+    .containerpizzacreme2 {
+      position: absolute;
+      height: 400px;
+      left: calc(50% - 550px);
+      display: flex;
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-top: 140%;
+    }
+  
+  
+    @media (max-width: 767px) {
+  
+        
+        .containerpizza {
+            position: absolute;
+            height: 400px;
+          
+            left: calc(50% - 450px);
+            display: flex;
+          } 
+          .containerpizzacreme {
+            position: absolute;
+            height: 400px;
+          
+            left: calc(50% - 450px);
+            display: flex;
+          } 
+          .containerpizzacreme2 {
+            position: absolute;
+            height: 400px;
+          
+            left: calc(50% - 450px);
+            display: flex;
+          } 
+          
+      }
+  
+  
+          
+    .card {
+      flex-direction: column;
+    align-items: center;
+      display: flex;
+      height: 280px;
+      width: 200px;
+      background-color: #17141d;
+      border-radius: 10px;
+      box-shadow: -1rem 0 3rem #000;
+    /*   margin-left: -50px; */
+      transition: 0.4s ease-out;
+      position: relative;
+      left: 0px;
+    }
+    
+    .card {
+        margin-left: -20px;
+        z-index: 1;
+    }
+    
+    .card:hover {
+      transform: translateY(-20px);
+    transition: 0.5s ease-out;
+    z-index: 6;
+    }
+    
+    .card:hover ~ .card {
+      position: relative;
+      left: 50x;
+      transition: 0.4s ease-out;
+    }
+    
+    .title {
+      color: white;
+      font-weight: 300;
+      position: absolute;
+      left: 20px;
+      top: 15px;
+    }
+  
+    .title1 {
+      display: none;
+      color: white;
+      font-size: 10px;
+      position: absolute;
+      left: -10%;
+      top: 15px;
+      opacity: 0;
+    }
+  
+      
+    .bar {
+      position: absolute;
+      top: 100px;
+      left: 20px;
+      height: 5px;
+      width: 140px;
+    }
+    
+    .emptybar {
+      background-color: #2e3033;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .filledbar {
+      position: absolute;
+      top: 0px;
+      z-index: 3;
+      width: 0px;
+      height: 100%;
+      background: rgb(0,134,56);
+      background: linear-gradient(90deg, rgba(0,134,56,1) 10%, rgba(255,255,255,1) 65%, rgba(237,0,0,1) 90%);
+      transition: 0.6s ease-out;
+    }
+    
+    .card:hover .filledbar {
+      width: 100px;
+      transition: 0.4s ease-out;
+    }
+    .card:hover .title1 {
+      display:block;
+      transition: opacity 0.9s ease;
+      opacity: 1;
+    }
+    
+    
+    .circle {
+      position: absolute;
+      top: 150px;
+      left: calc(50% - 60px);
+    }
+    
+    .stroke {
+      stroke: url(#gradient);
+      stroke-dasharray: 360;
+      stroke-dashoffset: 360;
+      transition: 0.6s ease-out;
+      z-index: 1;
+    }
+    
+    svg {
+      fill: #17141d;
+      stroke-width: 2px;
+      width: 150px;
+    }
+    
+    .card:hover .stroke {
+      stroke-dashoffset: 100;
+      transition: 0.6s ease-out;
+    }
+    /*Image dans les cartes pizza*/
+    .pizza {
+      position: absolute;
+      top: 39%;
+      left: 40%;
+      width: 90px; /* vous pouvez ajuster cette valeur en fonction de la taille souhaitée pour l'image de la pizza */
+      height: 90px; /* vous pouvez ajuster cette valeur en fonction de la taille souhaitée pour l'image de la pizza */
+      border-radius: 50%;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      transition: 0.4s ease-out;
+    }
+    .card:hover {
+      transform: translateY(-25px);
+      transition: 0.4s ease-out;
+    }
+    
+    .card:hover .pizza {
+      transform: translate(-50%, calc(-46% - 4px));
+      transition: 0.4s ease-out;
+    }
+  
+    /*MODIF*/
+  
+  
+  
+    .hero {
+      position: static;
+      height: 380vh;
+      width: 100%;
+      background: linear-gradient(rgb(0,0,0, 0.4), transparent), url(./img/background2.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+    /*Surface Pro*/
+    @media screen and (min-width: 912px) and (max-width: 1368px) {
+      .hero {
+        height: 145vh;
+      }
+      .pizzagold{
+        padding-top: 140%;
+    }
+    }
+
+/*Ipad*/
+    @media screen and (min-width: 768px) {
+      .pizzagold{
+        padding-top: 140%;
+    }
+    .containerpizzacreme {
+      padding-top: 10%;
+    }
+
+    .containerpizzacreme2 {
+      padding-top: 20%;
+    }
+    .salade-container img {
+      margin-left: 0%;
+    }
+    .hero {
+      height: 200vh;
+    }
+    .logo {
+      right: 50%;
+    }
+    }
+
+    @media screen and (min-width: 768px) {
+      .hero {
+        height: 500vh;
+      }
+      .pizzagold{
+        padding-top: 120%;
+    }
+    }
+/*Surface Duo*/
+@media screen and (min-width: 769px) { 
+ .hero {
+  height: 560vh;
+ }
+}
+    @media (max-width: 766px) { /* ou une autre taille de votre choix pour cibler les téléphones */
+      .containerpizza {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        right: -100%;
+        z-index: 1;
+      }
+      
+      .containerpizzacreme {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        right: -100%;
+        z-index: 1;
+      }
+      .containerpizzacreme2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        right: -100%;
+        z-index: 1;
+      }
+
+      .hero {
+        position: static;
+        height: 520vh;
+        width: 100%;
+        background: linear-gradient(rgb(0,0,0, 0.4), transparent), url(./img/background2.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+
+      .pizzagold {
+      padding-top: 420%;
+      margin-left: 25%;
+      }
+      #pizza2 {
+        margin-left: 40%;
+      }
+      .container2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        right: -100%;
+        z-index: 2;
+      }
+      
+      .container3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        right: -100%;
+        z-index: 2;
+      }
+      
+      .card {
+        margin: 5px 0;
+      }
+      
+      
+      
+      
+      
+      .bar {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        height: 5px;
+        width: 140px;
+      }
+      
+      .emptybar {
+        background-color: #2e3033;
+        width: 100%;
+        height: 100%;
+      }
+    
+    .filledbar {
+      position: absolute;
+      top: 0px;
+      z-index: 3;
+      width: 0px;
+      height: 100%;
+      background: rgb(0,134,56);
+      background: linear-gradient(90deg, rgba(0,134,56,1) 10%, rgba(255,255,255,1) 65%, rgba(237,0,0,1) 90%);
+      transition: 0.6s ease-out;
+    }
+    
+    
+    .stroke {
+      stroke: url(#gradient);
+      stroke-dasharray: 360;
+      stroke-dashoffset: 360;
+      transition: 0.6s ease-out;
+      z-index: 1;
+    }
+    
+    .circle {
+      position: absolute;
+      top: -50%;
+      left: calc(80% - 10px);
+    }
+  
+    svg {
+      fill: #17141d;
+      stroke-width: 2px;
+      width: 150px;
+    }
+    .card:hover .filledbar {
+      width: 100px;
+      transition: 0.4s ease-out;
+    }
+    
+    .card:hover .stroke {
+      stroke-dashoffset: 100;
+      transition: 0.6s ease-out;
+    }
+    
+    
+    .card:hover {
+      transform: translateY(-25px);
+      transition: 0.4s ease-out;
+    }
+    
+    .card:hover .pizza {
+      transform: translate(-50%, calc(-46% - 4px));
+      transition: 0.4s ease-out;
+    }
+  
+  
+  
+  
+    
+    /*POUR REVENIR LES CARTES A LA NORMALS*/
+    .card:hover:not(.clicked),
+    .card:active:not(.clicked) {
+      /* styles pour le hover et le clic */
+      transform: translateY(0px);
+      transition: 0.4s ease-out;
+    }
+    
+    .emptybar:hover:not(.clicked),
+    .emptybar:active:not(.clicked) {
+      background-color: #2e3033;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .filledbar:hover:not(.clicked),
+    .filledbar:active:not(.clicked) {
+      position: absolute;
+      top: 0px;
+      z-index: 3;
+      width: 0px;
+      transition: 0.6s ease-out;
+    }
+    
+    .stroke:hover:not(.clicked),
+    .stroke:active:not(.clicked) {
+      transition: 0.6s ease-out;
+      z-index: 1;
+    }
+  
+    .title1 {
+      display: none;
+    
+    }
+  }
+  
+  
+  
+  .container2 {
+    position: absolute;
+    height: 400px;
+    margin-top: 28%;
+    left: calc(50% - 550px);
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .container3 {
+    position: absolute;
+    height: 400px;
+    margin-top: 56%;
+    left: calc(50% - 550px);
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /*ECRAN APPLE ET  +*/
+  
+  @media (max-width: 767px){
+    .container2 {
+      margin-top: 140%;
+      margin-left: -5%;
+    }
+    .containerpizza {
+      margin-top: 30%;
+      margin-left: -30%;
+    }
+    .container3 {
+      margin-top: 255%;
+      margin-left: -5%;
+    }
+
+    .containerpizzacreme {
+      margin-top: 435%;
+      margin-left: -30%;
+    }
+    .containerpizzacreme2 {
+      margin-top: 550%;
+      margin-left: -35%;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1200px) {
+    
+    .containerpizza,
+    .container2,
+    .container3,
+    .containerpizzacreme,.containerpizzacreme2 {
+      height: 300px;
+      left: calc(50% - 400px);
+      margin-left: 30px;
+      margin-right: 30px;
+      display: flex;
+      justify-content: center;
+    }
+  
+
+    
+    .emptybar {
+      width: 75%;
+    }
+  
+    .card {
+      height: 240px;
+      width: 160px;
+      margin: 2px;
+    }
+  
+    .circle {
+      top: 120px;
+      left: calc(50% - 40px);
+    }
+  
+    .pizza {
+      top: 29%;
+      left: 35%;
+      width: 70px;
+      height: 70px;
+    }
+  
+    .bar {
+      top: 80px;
+    }
+  
+    .card:hover .pizza {
+      transform: translate(-50%, calc(-36% - 4px));
+    }
+  
+  
+  
+    /*WOWOWOWOWOWO*/
+  
+  
+    
+    
+    .circle {
+      position: absolute;
+      top: 120px;
+      left: calc(50% - 60px);
+    }
+    
+    .stroke {
+      stroke: url(#gradient);
+      stroke-dasharray: 360;
+      stroke-dashoffset: 360;
+      transition: 0.6s ease-out;
+      z-index: 1;
+    }
+    
+  /*Image dans les cartes pizza*/
+  .pizza {
+    position: absolute;
+    top: 33%;
+    left: 40%;
+    width: 90px; /* vous pouvez ajuster cette valeur en fonction de la taille souhaitée pour l'image de la pizza */
+    height: 90px; /* vous pouvez ajuster cette valeur en fonction de la taille souhaitée pour l'image de la pizza */
+    border-radius: 50%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    transition: 0.4s ease-out;
+  }
+  
+  }
